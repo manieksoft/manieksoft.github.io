@@ -18,7 +18,7 @@ function addElement() {
         item.textContent = textInput.value
         list.appendChild(item);
         textInput.value = '';
-        msg.textContent = 'Kolejne elementy będą ukazane na liście poniżej.';
+        msg.textContent = 'Kolejne elementy będą ukazane na liście poniżej. Aby usunąć wybrany element, należy na nim kliknąć.';
     }
 }
 
