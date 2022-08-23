@@ -22,7 +22,7 @@ function addElement() {
     }
 }
 
-function removeElement() {
+function removeLastElement() {
     let lastItem = list.lastChild;
     if (lastItem === null) {
         msg.textContent = 'Lista jest pusta. Dodaj elementy, by móc je usuwać.';
@@ -32,5 +32,10 @@ function removeElement() {
     }
 }
 
+function removeElement(e) {
+    this.removeChild(e.target);
+}
+
 addBtn.addEventListener('click', addElement);
-delBtn.addEventListener('click', removeElement);
+delBtn.addEventListener('click', removeLastElement);
+list.addEventListener('click', removeElement);
