@@ -2,7 +2,6 @@ body {
     background: #ffffff;
 }
 
-/* .preview {
-    margin: 0 auto;
-    width: 50%;
-} */
+ol {
+    list-style-type: none;
+}

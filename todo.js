@@ -32,6 +32,8 @@ function removeLastElement() {
     }
 }
 
+// Dodać modal, który otwiera się po kliknięciu w element listy i to na nim potwierdzamy usunięcie elementu.
+
 function removeElement(e) {
     this.removeChild(e.target);
 }
