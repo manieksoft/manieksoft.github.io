@@ -1,14 +1,32 @@
+// Dodawanie i usuwanie elementów
+
 const textInput = document.getElementById('text-input');
 const addBtn = document.getElementById('add-button');
 const delBtn = document.getElementById('remove-button');
 
+// Komunikat
+
 const msg = document.getElementById('msg');
 
+// Lista elementów
+
 const section = document.querySelector('section');
-
 const list = document.createElement('ol');
-
 section.appendChild(list);
+
+// Modal
+
+const modal = document.getElementById('myModal');
+const modalBtn = document.getElementById('modalBtn');
+const modalCloseBtn = document.getElementsByClassName('close')[0];
+const confirmBtn = document.getElementById('confirm');
+const rejectBtn = document.getElementById('reject');
+
+// Kliknięty element
+
+let clickedElement;
+
+// Funkcje dodawania i usuwania elementu
 
 function addElement() {
     if (textInput.value === '') {
@@ -32,24 +50,20 @@ function removeLastElement() {
     }
 }
 
-function removeElement(e) {
-    this.removeChild(e.target);
-    console.log('Element został usunięty!');
+// Funkcje przechowywania i usuwania wybranego elementu
+
+function storeClickedElement(e) {
+    clickedElement = e.target;
+    console.log(clickedElement.textContent);
 }
 
-addBtn.addEventListener('click', addElement);
-delBtn.addEventListener('click', removeLastElement);
-list.addEventListener('click', openModal);
+function removeElement() {
+    //clickedElement.parentNode.removeChild(clickedElement);
+    clickedElement.remove();
+    msg.textContent = 'Wybrany element został usunięty!';
+}
 
-// Dodać modal, który otwiera się po kliknięciu w element listy i to na nim potwierdzamy usunięcie elementu.
-
-// Trzeba po DOM cofnąć się do body, potem zejśc do section -> list i odnaleźć element do usunięcia
-
-const modal = document.getElementById('myModal');
-const modalBtn = document.getElementById('modalBtn');
-const modalCloseBtn = document.getElementsByClassName('close')[0];
-const confirmBtn = document.getElementById('confirm');
-const rejectBtn = document.getElementById('reject');
+// Funkcje modala
 
 function openModal() {
     modal.style.display = 'block';
@@ -65,10 +79,20 @@ window.onclick = function (e) {
     }
 }
 
+// Eventy dla przycisków dodawania i usuwania elementu
+
+addBtn.addEventListener('click', addElement);
+delBtn.addEventListener('click', removeLastElement);
+
+// Eventy dla modala
+
 modalBtn.addEventListener('click', openModal);
 modalCloseBtn.addEventListener('click', closeModal);
-
 confirmBtn.addEventListener('click', closeModal);
 confirmBtn.addEventListener('click', removeElement);
-
 rejectBtn.addEventListener('click', closeModal);
+
+// Eventy dla listy
+
+list.addEventListener('click', openModal);
+list.addEventListener('click', storeClickedElement);
