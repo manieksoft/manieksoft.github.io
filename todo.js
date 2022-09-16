@@ -94,5 +94,10 @@ rejectBtn.addEventListener('click', closeModal);
 
 // Eventy dla listy
 
-list.addEventListener('click', openModal);
-list.addEventListener('click', storeClickedElement);
+// list.addEventListener('click', openModal);
+// list.addEventListener('click', storeClickedElement);
+
+list.addEventListener('click', (e) => {
+    openModal();
+    storeClickedElement(e);
+})
