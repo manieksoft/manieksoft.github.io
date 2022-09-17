@@ -17,7 +17,6 @@ section.appendChild(list);
 // Modal
 
 const modal = document.getElementById('myModal');
-const modalBtn = document.getElementById('modalBtn');
 const modalCloseBtn = document.getElementsByClassName('close')[0];
 const confirmBtn = document.getElementById('confirm');
 const rejectBtn = document.getElementById('reject');
@@ -58,7 +57,6 @@ function storeClickedElement(e) {
 }
 
 function removeElement() {
-    //clickedElement.parentNode.removeChild(clickedElement);
     clickedElement.remove();
     msg.textContent = 'Wybrany element został usunięty!';
 }
@@ -86,18 +84,16 @@ delBtn.addEventListener('click', removeLastElement);
 
 // Eventy dla modala
 
-modalBtn.addEventListener('click', openModal);
 modalCloseBtn.addEventListener('click', closeModal);
-confirmBtn.addEventListener('click', closeModal);
-confirmBtn.addEventListener('click', removeElement);
 rejectBtn.addEventListener('click', closeModal);
+confirmBtn.addEventListener('click', () => {
+    closeModal();
+    removeElement();
+});
 
 // Eventy dla listy
-
-// list.addEventListener('click', openModal);
-// list.addEventListener('click', storeClickedElement);
 
 list.addEventListener('click', (e) => {
     openModal();
     storeClickedElement(e);
-})
+});
