@@ -2,6 +2,82 @@ body {
     background: #ffffff;
 }
 
+main {
+    width: 50%;
+    margin: 0 auto;
+    background-color: lightpink;
+    padding: 20px;
+}
+
+nav {
+    background-color: lightblue;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* section {
+    background-color: lightblue;
+} */
+
+#msg {
+    margin-bottom: 20px;
+    height: 50px;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+#typeArea {
+    margin-bottom: 10px;
+}
+
+#text-input {
+    height: 40px;
+    width: 100%;
+    font-size: 28px;
+    border: none;
+}
+
+#controlButtons {
+    height: 40px;
+    width: 100%;
+    display: inline;
+}
+
+#controlButtons button {
+    height: 40px;
+    width: 49%;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#add-button {
+    background-color: #4ad66d;
+}
+
+#add-button:hover {
+    background-color: #2dc653;
+}
+
+#add-button:active {
+    background-color: #25a244;
+}
+
+#remove-button {
+    background-color: #f7a399;
+}
+
+#remove-button:hover {
+    background-color: #f38375;
+}
+
+#remove-button:active {
+    background-color: #ef6351;
+}
+
 ol {
     list-style-type: none;
 }

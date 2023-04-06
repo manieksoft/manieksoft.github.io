@@ -1,29 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Add to list</title>
+        <link href="todo.css" type="text/css" rel="stylesheet" />
+        <link href="modal.css" type="text/css" rel="stylesheet" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Add to list</title>
-    <link href="todo.css" type="text/css" rel="stylesheet">
-    <link href="modal.css" type="text/css" rel="stylesheet">
-</head>
+    <body>
+        <main>
+            <nav>
+                <h1>MyTODO</h1>
+            </nav>
 
-<body>
-    <input type="text" name="text" id="text-input" />
-    <button type="button" id="add-button">Dodaj element</button>
-    <button type="button" id="remove-button">Usuń ostatni element</button>
-    <p id="msg">Kolejne elementy będą ukazane na liście poniżej. Aby usunąć wybrany element, należy na nim kliknąć i potwierdzić operację.</p>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Czy chcesz usunąć wskazany element?</p>
-            <button type="button" id="confirm">TAK</button>
-            <button type="button" id="reject">NIE</button>
-        </div>
-    </div>
-    <section class="preview">
-    </section>
-    <script src="todo.js"></script>
-</body>
+            <section id="msg">
+                Kolejne elementy będą ukazane na liście poniżej. Aby usunąć
+                wybrany element, należy na nim kliknąć i potwierdzić operację.
+            </section>
 
+            <section id="controls">
+                <div id="typeArea">
+                    <input type="text" name="text" id="text-input" />
+                </div>
+
+                <div id="controlButtons">
+                    <button type="button" id="add-button">Dodaj element</button>
+                    <button type="button" id="remove-button">
+                        Usuń ostatni element
+                    </button>
+                </div>
+            </section>
+
+            <section id="preview"></section>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Czy chcesz usunąć wskazany element?</p>
+                    <button type="button" id="confirm">TAK</button>
+                    <button type="button" id="reject">NIE</button>
+                </div>
+            </div>
+        </main>
+        <script src="todo.js"></script>
+    </body>
 </html>
