@@ -1,21 +1,21 @@
 // Add and remove elements
-const textInput = document.getElementById("text-input");
-const addBtn = document.getElementById("add-button");
-const delBtn = document.getElementById("remove-button");
+const textInput = document.querySelector("#text-input");
+const addBtn = document.querySelector("#add-button");
+const delBtn = document.querySelector("#remove-button");
 
 // Message
-const msg = document.getElementById("msg");
+const msg = document.querySelector("#msg");
 
 // Elements list
-const section = document.getElementById("preview");
+const section = document.querySelector("#preview");
 const list = document.createElement("ol");
 section.appendChild(list);
 
 // Modal
-const modal = document.getElementById("myModal");
-const modalCloseBtn = document.getElementsByClassName("close")[0];
-const confirmBtn = document.getElementById("confirm");
-const rejectBtn = document.getElementById("reject");
+const modal = document.querySelector("#myModal");
+const modalCloseBtn = document.querySelector(".close");
+const confirmBtn = document.querySelector("#confirm");
+const rejectBtn = document.querySelector("#reject");
 
 // Clicked element variable
 let clickedElement;
