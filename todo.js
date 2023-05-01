@@ -57,17 +57,21 @@ function removeElement() {
 }
 
 // Modal functions
+//TODO: podmienić obecny style.display na .classList.toggle
+
 function openModal() {
     modal.style.display = "block";
 }
 
 function closeModal() {
     modal.style.display = "none";
+    msg.textContent = "Operacja usunięcia elementu anulowana";
 }
 
 window.onclick = function (e) {
     if (e.target === modal) {
         modal.style.display = "none";
+        msg.textContent = "Operacja usunięcia elementu anulowana";
     }
 };
 

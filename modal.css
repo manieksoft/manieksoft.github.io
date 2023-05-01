@@ -19,12 +19,12 @@
     margin: auto;
     padding: 20px;
     border: 1px solid #888888;
-    width: 25%;
+    width: 30%;
 }
 
 /* Close button */
 .close {
-    color: #aaaaaa;
+    color: #9bb1ff;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -32,7 +32,46 @@
 
 .close:hover,
 .close:focus {
-    color: #000000;
+    color: #5465ff;
     text-decoration: none;
     cursor: pointer;
+}
+
+button#confirm {
+    border-style: none;
+    color: #ffffff;
+    background-color: #9bb1ff;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+}
+
+button#confirm:hover {
+    background-color: #788bff;
+}
+
+button#confirm:active {
+    background-color: #5465ff;
+}
+
+button#reject {
+    border-style: none;
+    border: 1px solid #9bb1ff;
+    color: #5465ff;
+    background-color: #ffffff;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+}
+
+button#reject:hover {
+    border: 1px solid #788bff;
+    background-color: #788bff;
+    color: white;
+}
+
+button#reject:active {
+    border: 1px solid #5465ff;
+    background-color: #5465ff;
+    color: white;
 }

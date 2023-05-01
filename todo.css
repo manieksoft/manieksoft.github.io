@@ -1,18 +1,24 @@
 body {
     background: #ffffff;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    font-size: 20px;
 }
 
 main {
     width: 50%;
     margin: 0 auto;
-    background-color: lightpink;
+    background-color: #bfd7ff;
     padding: 20px;
+    border: 1px solid #5465ff;
+    color: #5465ff;
 }
 
 nav {
-    background-color: lightblue;
+    background-color: #5465ff;
     padding: 10px;
     margin-bottom: 20px;
+    color: white;
 }
 
 /* section {
@@ -36,7 +42,8 @@ nav {
     height: 40px;
     width: 100%;
     font-size: 28px;
-    border: none;
+    border: 1px solid #5465ff;
+    color: #5465ff;
 }
 
 #controlButtons {
@@ -52,6 +59,11 @@ nav {
     color: white;
     font-size: 20px;
     font-weight: 700;
+}
+
+button {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
 }
 
 #add-button {
